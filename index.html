@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aurora Digital - Illuminate Your Vision</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts: Poppins for headings, Lato for body for softness -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Lato', sans-serif; /* Softer, highly readable body font */
+            background-color: #fcfaff; /* Very light purple/pink tint */
+            color: #4a5568; /* Soft charcoal text */
+            overflow-x: hidden; /* Prevent horizontal scroll from SVG */
+        }
+        h1, h2, h3 {
+            font-family: 'Poppins', sans-serif; /* Stronger, modern headings */
+        }
+
+        /* Custom button styling for an elegant, attractive look */
+        .primary-button {
+            background-image: linear-gradient(to right, #a78bfa, #c4b5fd); /* Soft purple gradient */
+            color: white;
+            padding: 1.1rem 3.5rem; /* Larger padding */
+            border-radius: 9999px;
+            font-weight: 700;
+            letter-spacing: 0.08em; /* Slightly more space */
+            text-transform: uppercase;
+            transition: all 0.3s ease-in-out;
+            box-shadow: 0 10px 25px rgba(167, 139, 250, 0.4); /* Soft purple shadow */
+            position: relative;
+            z-index: 10;
+        }
+        .primary-button:hover {
+            transform: translateY(-6px); /* More pronounced lift */
+            box-shadow: 0 15px 40px rgba(167, 139, 250, 0.6);
+            background-image: linear-gradient(to right, #c4b5fd, #a78bfa); /* Reverse gradient on hover */
+        }
+        .secondary-button {
+            background-color: #ffffff;
+            color: #a78bfa; /* Soft purple text */
+            padding: 1.1rem 3.5rem;
+            border-radius: 9999px;
+            font-weight: 700;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            border: 2px solid #ddd6fe; /* Lighter purple border */
+            transition: all 0.3s ease-in-out;
+            box-shadow: 0 8px 20px rgba(221, 214, 254, 0.3);
+            position: relative;
+            z-index: 10;
+        }
+        .secondary-button:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 12px 30px rgba(221, 214, 254, 0.5);
+            background-color: #f3f4f6; /* Very light gray on hover */
+        }
+
+        /* Hero section specific styling for background elements */
+        .hero-background-blob {
+            position: absolute;
+            top: -15%;
+            right: -15%;
+            width: 55vw;
+            height: 55vw;
+            background: linear-gradient(135deg, #fbcfe8, #a78bfa); /* Soft pink to purple gradient */
+            border-radius: 40% 60% 70% 30% / 40% 50% 60% 50%; /* Blob shape */
+            opacity: 0.3;
+            filter: blur(100px); /* More blur for ethereal feel */
+            z-index: 0;
+            animation: blob-float 12s ease-in-out infinite alternate;
+        }
+        .hero-background-blob-2 {
+            position: absolute;
+            bottom: -10%;
+            left: -10%;
+            width: 45vw;
+            height: 45vw;
+            background: linear-gradient(135deg, #bae6fd, #67e8f9); /* Light blue to cyan gradient */
+            border-radius: 60% 40% 30% 70% / 60% 50% 50% 40%; /* Different blob shape */
+            opacity: 0.25;
+            filter: blur(90px);
+            z-index: 0;
+            animation: blob-float-reverse 14s ease-in-out infinite alternate;
+        }
+
+        @keyframes blob-float {
+            0% { transform: translate(0, 0) rotate(0deg); }
+            50% { transform: translate(30px, -30px) rotate(8deg); }
+            100% { transform: translate(0, 0) rotate(0deg); }
+        }
+
+        @keyframes blob-float-reverse {
+            0% { transform: translate(0, 0) rotate(0deg); }
+            50% { transform: translate(-20px, 20px) rotate(-5deg); }
+            100% { transform: translate(0, 0) rotate(0deg); }
+        }
+
+        /* Animation for section content */
+        .fade-in-up {
+            opacity: 0;
+            transform: translateY(30px);
+            animation: fade-in-up 1s ease-out forwards;
+        }
+
+        @keyframes fade-in-up {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Stagger animation for service cards */
+        .service-card:nth-child(1) { animation-delay: 0.3s; }
+        .service-card:nth-child(2) { animation-delay: 0.6s; }
+        .service-card:nth-child(3) { animation-delay: 0.9s; }
+    </style>
+</head>
+<body class="antialiased">
+
+    <!-- Header/Navigation -->
+    <header class="p-5 bg-white shadow-xl sticky top-0 z-20">
+        <nav class="container mx-auto flex justify-between items-center">
+            <div class="text-3xl md:text-4xl font-extrabold text-[#a78bfa]">Aurora Digital</div>
+            <ul class="flex space-x-6 md:space-x-10">
+                <li><a href="#" class="text-gray-600 hover:text-[#a78bfa] font-semibold transition-colors duration-200 text-lg">Home</a></li>
+                <li><a href="#services-section" class="text-gray-600 hover:text-[#a78bfa] font-semibold transition-colors duration-200 text-lg">Services</a></li>
+                <li><a href="#" class="text-gray-600 hover:text-[#a78bfa] font-semibold transition-colors duration-200 text-lg">Portfolio</a></li>
+                <li><a href="#" class="text-gray-600 hover:text-[#a78bfa] font-semibold transition-colors duration-200 text-lg">About</a></li>
+                <li><a href="#contact-section" class="text-gray-600 hover:text-[#a78bfa] font-semibold transition-colors duration-200 text-lg">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="relative bg-gradient-to-br from-[#e9d5ff] to-[#fcfaff] py-28 md:py-48 overflow-hidden text-center flex items-center justify-center min-h-[calc(100vh-88px)]">
+        <!-- Background Blobs -->
+        <div class="hero-background-blob"></div>
+        <div class="hero-background-blob-2"></div>
+
+        <div class="container mx-auto px-8 relative z-10 fade-in-up">
+            <h1 class="text-7xl md:text-9xl font-extrabold leading-tight text-[#6b46c1] mb-8 drop-shadow-xl">
+                Unleash Your Brand's Glow.
+            </h1>
+            <p class="text-xl md:text-3xl text-gray-700 mb-16 max-w-5xl mx-auto leading-relaxed font-light">
+                At Aurora Digital, we illuminate your brand's unique story, crafting enchanting digital experiences that captivate hearts and drive remarkable growth. Step into your spotlight.
+            </p>
+            <div class="flex flex-col sm:flex-row justify-center gap-8">
+                <a href="#services-section" class="primary-button inline-block cursor-pointer">Explore Our Services</a>
+                <a href="#contact-section" class="secondary-button inline-block cursor-pointer">Get a Free Consultation</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Value Proposition Section -->
+    <section id="services-section" class="py-24 md:py-36 bg-white">
+        <div class="container mx-auto px-8 text-center max-w-6xl fade-in-up">
+            <h2 class="text-5xl font-bold text-[#a78bfa] mb-14">Where Vision Meets Digital Brilliance.</h2>
+            <p class="text-xl text-gray-700 leading-relaxed mb-20">
+                Our approach is a delicate blend of intuitive design and powerful analytics, creating strategies that are not just beautiful, but profoundly effective. We empower brands to bloom in the digital garden, turning aspirations into achievements.
+            </p>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-12 mt-16">
+                <div class="p-10 bg-gradient-to-br from-indigo-50 to-indigo-100 rounded-3xl shadow-xl transform hover:scale-105 transition-transform duration-300 service-card fade-in-up">
+                    <div class="text-7xl mb-8">✨</div>
+                    <h3 class="text-3xl font-semibold text-gray-800 mb-4">Enchanting SEO & Content</h3>
+                    <p class="text-gray-600 leading-relaxed text-lg">
+                        We weave magic into your online presence, ensuring your brand shines brightly in search results and captures attention with captivating narratives.
+                    </p>
+                </div>
+                <div class="p-10 bg-gradient-to-br from-pink-50 to-pink-100 rounded-3xl shadow-xl transform hover:scale-105 transition-transform duration-300 service-card fade-in-up">
+                    <div class="text-7xl mb-8">💖</div>
+                    <h3 class="text-3xl font-semibold text-gray-800 mb-4">Harmonious Social Media</h3>
+                    <p class="text-gray-600 leading-relaxed text-lg">
+                        Cultivate genuine connections and foster a loving community around your brand through engaging and authentic social strategies.
+                    </p>
+                </div>
+                <div class="p-10 bg-gradient-to-br from-teal-50 to-teal-100 rounded-3xl shadow-xl transform hover:scale-105 transition-transform duration-300 service-card fade-in-up">
+                    <div class="text-7xl mb-8">🚀</div>
+                    <h3 class="text-3xl font-semibold text-gray-800 mb-4">Accelerated Growth Campaigns</h3>
+                    <p class="text-gray-600 leading-relaxed text-lg">
+                        Launch your brand to new heights with intelligent, targeted advertising that delivers impressive returns and measurable success.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action / Contact Section -->
+    <section id="contact-section" class="py-24 md:py-36 bg-[#fcfaff] text-center fade-in-up">
+        <div class="container mx-auto px-8 max-w-4xl bg-white p-12 rounded-3xl shadow-2xl">
+            <h2 class="text-5xl font-bold text-[#a78bfa] mb-10">Ready to Illuminate Your Digital Path?</h2>
+            <p class="text-xl text-gray-700 mb-12 leading-relaxed">
+                Your journey to digital excellence begins here. Connect with Aurora Digital today for a magical consultation tailored to your unique aspirations.
+            </p>
+            <a href="mailto:hello@auroradigital.com" class="primary-button inline-block cursor-pointer">Begin Your Transformation</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 py-14 text-center text-gray-400">
+        <div class="container mx-auto px-6">
+            <p class="mb-3 text-md">&copy; 2025 Aurora Digital. All rights reserved. ✨</p>
+            <p class="text-sm">Crafting digital dreams into reality.</p>
+            <div class="flex justify-center space-x-8 mt-6">
+                <a href="#" class="hover:text-white transition-colors text-md">Privacy Policy</a>
+                <a href="#" class="hover:text-white transition-colors text-md">Terms of Service</a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
